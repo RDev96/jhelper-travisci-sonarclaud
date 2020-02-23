@@ -1,6 +1,6 @@
 package com.jhipster.devops.web.rest.errors;
 
-import com.jhipster.devops.MyappApp;
+import com.jhipster.devops.MyApp;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @WithMockUser
 @AutoConfigureMockMvc
-@SpringBootTest(classes = MyappApp.class)
+@SpringBootTest(classes = MyApp.class)
 public class ExceptionTranslatorIT {
 
     @Autowired

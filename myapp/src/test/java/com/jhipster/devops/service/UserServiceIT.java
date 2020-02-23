@@ -1,6 +1,6 @@
 package com.jhipster.devops.service;
 
-import com.jhipster.devops.MyappApp;
+import com.jhipster.devops.MyApp;
 import com.jhipster.devops.config.Constants;
 import com.jhipster.devops.domain.User;
 import com.jhipster.devops.repository.UserRepository;
@@ -32,7 +32,7 @@ import static org.mockito.Mockito.when;
 /**
  * Integration tests for {@link UserService}.
  */
-@SpringBootTest(classes = MyappApp.class)
+@SpringBootTest(classes = MyApp.class)
 @Transactional
 public class UserServiceIT {
 

@@ -1,0 +1,38 @@
+language: java
+jdk: oraclejdk8
+dist: trusty
+install:
+  - mvn -N io.takari:maven:wrapper
+  - ./mvnw test -B
+  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+addons:
+  sonarcloud:
+    organization: "rdev96"
+    token:
+      secure: "395ca2592be3148f5697d67ce975a0f9a15f0da9" # encrypted value of your token
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=raulcampos1996
+
+
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
+
+notifications:
+  email:
+    recipients:
+      - raulcampos066@gmail.com
+    on_success: always # default: change
+    on_failure: always # default: always
+deploy:
+  provider: heroku
+  api_key:
+    secure: "54f92082-c8f8-4958-bffc-d768d77035ed"
+  app: jhipster-devops
+  on:
+    branch: master
+  skip_cleanup: true

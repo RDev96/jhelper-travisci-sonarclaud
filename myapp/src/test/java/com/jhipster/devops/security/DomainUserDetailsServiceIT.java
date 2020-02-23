@@ -1,6 +1,6 @@
 package com.jhipster.devops.security;
 
-import com.jhipster.devops.MyappApp;
+import com.jhipster.devops.MyApp;
 import com.jhipster.devops.domain.User;
 import com.jhipster.devops.repository.UserRepository;
 
@@ -21,7 +21,7 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 /**
  * Integrations tests for {@link DomainUserDetailsService}.
  */
-@SpringBootTest(classes = MyappApp.class)
+@SpringBootTest(classes = MyApp.class)
 @Transactional
 public class DomainUserDetailsServiceIT {
 

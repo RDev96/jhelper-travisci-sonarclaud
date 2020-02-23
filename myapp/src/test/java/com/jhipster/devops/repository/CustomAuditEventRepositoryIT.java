@@ -1,6 +1,6 @@
 package com.jhipster.devops.repository;
 
-import com.jhipster.devops.MyappApp;
+import com.jhipster.devops.MyApp;
 import com.jhipster.devops.config.Constants;
 import com.jhipster.devops.config.audit.AuditEventConverter;
 import com.jhipster.devops.domain.PersistentAuditEvent;
@@ -27,7 +27,7 @@ import static com.jhipster.devops.repository.CustomAuditEventRepository.EVENT_DA
 /**
  * Integration tests for {@link CustomAuditEventRepository}.
  */
-@SpringBootTest(classes = MyappApp.class)
+@SpringBootTest(classes = MyApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIT {
 

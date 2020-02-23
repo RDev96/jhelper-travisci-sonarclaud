@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import './vendor';
-import { MyappSharedModule } from 'app/shared/shared.module';
-import { MyappCoreModule } from 'app/core/core.module';
-import { MyappAppRoutingModule } from './app-routing.module';
-import { MyappHomeModule } from './home/home.module';
-import { MyappEntityModule } from './entities/entity.module';
+import { MyAppSharedModule } from 'app/shared/shared.module';
+import { MyAppCoreModule } from 'app/core/core.module';
+import { MyAppAppRoutingModule } from './app-routing.module';
+import { MyAppHomeModule } from './home/home.module';
+import { MyAppEntityModule } from './entities/entity.module';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { MainComponent } from './layouts/main/main.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
@@ -18,14 +18,14 @@ import { ErrorComponent } from './layouts/error/error.component';
 @NgModule({
   imports: [
     BrowserModule,
-    MyappSharedModule,
-    MyappCoreModule,
-    MyappHomeModule,
+    MyAppSharedModule,
+    MyAppCoreModule,
+    MyAppHomeModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
-    MyappEntityModule,
-    MyappAppRoutingModule
+    MyAppEntityModule,
+    MyAppAppRoutingModule
   ],
   declarations: [MainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
   bootstrap: [MainComponent]
 })
-export class MyappAppModule {}
+export class MyAppAppModule {}

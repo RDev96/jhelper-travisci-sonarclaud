@@ -19,4 +19,4 @@ import { TranslateModule } from '@ngx-translate/core';
     TranslateModule
   ]
 })
-export class MyappSharedLibsModule {}
+export class MyAppSharedLibsModule {}

@@ -15,10 +15,10 @@
 
 spring:
   application:
-    name: myapp
+    name: myApp
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:mem:myapp;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:myApp;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     name:
     username:
     password:
@@ -57,13 +57,13 @@ spring:
       enabled: false
   task:
     execution:
-      thread-name-prefix: myapp-task-
+      thread-name-prefix: my-app-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: myapp-scheduling-
+      thread-name-prefix: my-app-scheduling-
       pool:
         size: 1
   thymeleaf:
@@ -81,7 +81,7 @@ server:
 
 jhipster:
   clientApp:
-    name: 'myappApp'
+    name: 'myApp'
   logging:
     # To test json console appender
     use-json-format: true # By default, logs are in Json format
@@ -97,7 +97,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: ZDc0ODFjZTk2MmYwNGU3MTYxNzIxNTY4YWExNzFhZTdkNThlYzA4ZTIxYWUyYzIxZjk2MTBhYTMxMDllNjQyY2QxZmZjNjllZWMxMmNkNWFjZDE0NGI5ODliNDE1NTllY2JmNzZiMWJmMGViMWRhZjNkYjQ2ZjQxYWYzYzM4YjM=
+        base64-secret: MDg4NGE2MWUxYTVhZmExMzAwOGI1ZjdmZTMxZWNiZjFkZDM3YjdiNTdmM2VjZDU1Mjg5OGM4YjQ5YmZiMjdhZGMxMWUxYjVjZWFiOTYzOTMxYTg5NDRmYzIyMDc1ODJiNGVlZTdiM2E3OGQxYTgzMWMwNmJiNWZjN2Y4ZjgyMTc=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
   metrics:
